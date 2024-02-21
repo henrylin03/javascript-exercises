@@ -1,9 +1,13 @@
+const roundToOneDecimalPlace = num => Math.round(num * 10) / 10;
+
 const convertToCelsius = function (tempInFahrenheit) {
-  return (tempInFahrenheit - 32) * 5 / 9;
+  const tempInCelsius = (tempInFahrenheit - 32) * 5 / 9
+  return roundToOneDecimalPlace(tempInCelsius);
 };
 
 const convertToFahrenheit = function (tempInCelsius) {
-  return tempInCelsius * 9 / 5 + 32;
+  const tempInFahrenheit = tempInCelsius * 9 / 5 + 32;
+  return roundToOneDecimalPlace(tempInFahrenheit);
 };
 
 // Do not edit below this line
