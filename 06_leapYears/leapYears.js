@@ -1,8 +1,12 @@
 const leapYears = function (year) {
-    if (year % 4) {
-        return false;
+    const yearIsDivisibleBy = divisor => year % divisor === 0;
+
+    if ((yearIsDivisibleBy(4) && !yearIsDivisibleBy(100)) ||
+        yearIsDivisibleBy(400)) {
+        return true;
     };
-    return true;
+
+    return false;
 };
 
 // Do not edit below this line
