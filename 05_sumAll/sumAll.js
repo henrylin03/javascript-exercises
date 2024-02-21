@@ -1,8 +1,10 @@
-const sumAll = function (startNum, endNum) {
-    let sum = 0;
+const sumAll = function (num1, num2) {
+    const start = Math.min(...arguments);
+    const end = Math.max(...arguments);
 
-    let n = startNum;
-    while (n <= endNum) {
+    let sum = 0;
+    let n = start;
+    while (n <= end) {
         sum += n;
         n++;
     };
